@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <title>Gastitos</title>
 </head>
 <body>
@@ -19,9 +19,19 @@
     </main>
 
     <footer>
-        <p><audio loop autoplay>
-            <source src="sound/sax.mp3" type="audio/filetype">
-        </audio></p>
+        <p><audio id="audio" loop autoplay muted>
+            <source src="sound/sax.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <script>
+            document.body.addEventListener('click', () => {
+                const audio = document.getElementById('audio');
+                audio.muted = false;
+                audio.play();
+            });
+        </script>
+        </p>
     </footer>
 </body>
 </html>
