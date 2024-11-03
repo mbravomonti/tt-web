@@ -13,8 +13,7 @@
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#gastos">Gastos</a></li>
-                <li><a href="#presupuesto">Presupuesto</a></li>
+                <li><a href="#gastos">Gastitos</a></li>
                 <li><a href="#reseñas">Reseñas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -27,45 +26,25 @@
             <p>Monitoreá y controlá tus gastos mensuales.</p>
             <img src="v991-n-26-removebg-preview.png" alt="Imagen de Gastos" class="responsive-img" width="10%" height="10%">
         </section>
-
-        <section id="gastos" class="gastos-container">
-            <h2>Listado de Gastos</h2>
-            <p>Revisá tus gastos mensuales y controlá tu presupuesto de manera eficiente.</p>
+        <section id="gastos-vmusic" class="gastos-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/wDjeBNv6ip0?si=G_yglpUbay1bz5LF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Descripción</th>
-                        <th>Monto</th>
-                        <th>Fecha</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Comida</td>
-                        <td>$200</td>
-                        <td>2024-01-01</td>
-                    </tr>
-                    <tr>
-                        <td>Transporte</td>
-                        <td>$100</td>
-                        <td>2024-01-02</td>
-                    </tr>
-                    <tr>
-                        <td>Salidas</td>
-                        <td>$300</td>
-                        <td>2024-01-03</td>
-                    </tr>
-                </tbody>
-            </table>
-            <form id="gastos-form">
-                <input type="text" id="descripcion" placeholder="Descripción del gasto" required>
-                <input type="number" id="monto" placeholder="Monto" required>
-                <input type="date" id="fecha" required>
-                <button type="submit">Agregar Gastito</button>
-            </form>
         </section>
-
+        <h2>Listado de Gastitos</h2>
+        <p>Revisá tus gastos mensuales y controlá tu presupuesto de manera eficiente.</p>
+        <section id="gastos" class="gastos-container">
+            <div class="gasto-card">
+                <p>Cerveza</p>
+                <p>$2500</p>
+            </div>
+            <div class="gasto-card">
+                <p>Sandwich</p>
+                <p>$2000</p>
+            </div>
+            <div class="gasto-card">
+                <p>Alfajor</p>
+                <p>$750</p>
+            </div>
+        </section>
         <section id="presupuesto" class="presupuesto-container">
             <h2>Control de Presupuesto</h2>
             <label for="presupuesto-mensual">Establecer presupuesto mensual:</label>
@@ -74,12 +53,11 @@
                 <p>Presupuesto restante: <span id="presupuesto-restante">$0</span></p>
             </div>
         </section>
-
         <section id="reseñas" class="reseñas-container">
             <h2>Reseñas</h2>
-            <div class="reseña-item">Excelente herramienta para monitorear mis gastos.</div>
-            <div class="reseña-item">Me ayuda a controlar mis finanzas fácilmente.</div>
-            <div class="reseña-item">Recomendada para cualquiera que quiera ahorrar.</div>
+            <div class="reseña-item">Excelente aplicación, me ayuda mucho. - Pedro</div>
+            <div class="reseña-item">Muy fácil de usar y útil. - Jose</div>
+            <div class="reseña-item">Totalmente recomendable. - Micaela</div>
         </section>
 
         <section id="contacto">
@@ -87,18 +65,20 @@
             <form action="https://formspree.io/f/mbljjavo" method="POST">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
+
                 <label for="email">Correo electrónico:</label>
                 <input type="email" id="email" name="email" required>
+
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" required></textarea>
+
                 <button type="submit">Enviar</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Aplicación de Gestión de Gastos. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Gastitos. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
-
