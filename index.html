@@ -6,17 +6,26 @@
     <title>Gastitos</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Gestión de Gastos Personales</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#gastos">Gastitos</a></li>
-                <li><a href="#reseñas">Reseñas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#inicio">Gastitos</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#gastos">Gastitos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#reseñas">Reseñas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#carrito">Carrito</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -24,60 +33,58 @@
         <section id="inicio">
             <h2>Bienvenido a Gastitos</h2>
             <p>Monitoreá y controlá tus gastos mensuales.</p>
-            <img src="v991-n-26-removebg-preview.png" alt="Imagen de Gastos" class="responsive-img" width="10%" height="10%">
-        </section>
-        <section id="gastos-vmusic" class="gastos-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/weRIIJ3Fs8Q?si=paVr0JMNNzQvGOFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </section>
-        <h2>Listado de Gastitos</h2>
-        <p>Revisá tus gastos mensuales y controlá tu presupuesto de manera eficiente.</p>
-        <section id="gastos" class="gastos-container">
-            <div class="gasto-card">
-                <p>Cerveza</p>
-                <p>$2500</p>
-            </div>
-            <div class="gasto-card">
-                <p>Sandwich</p>
-                <p>$2000</p>
-            </div>
-            <div class="gasto-card">
-                <p>Alfajor</p>
-                <p>$750</p>
-            </div>
-        </section>
-        <section id="presupuesto" class="presupuesto-container">
-            <h2>Control de Presupuesto</h2>
-            <label for="presupuesto-mensual">Establecer presupuesto mensual:</label>
-            <input type="number" id="presupuesto-mensual" placeholder="Ingrese su presupuesto">
-            <div id="presupuesto-info">
-                <p>Presupuesto restante: <span id="presupuesto-restante">$0</span></p>
-            </div>
-        </section>
-        <section id="reseñas" class="reseñas-container">
-            <h2>Reseñas</h2>
-            <div class="reseña-item">Excelente aplicación, me ayuda mucho. - Pedro</div>
-            <div class="reseña-item">Muy fácil de usar y útil. - Jose</div>
-            <div class="reseña-item">Totalmente recomendable. - Micaela</div>
         </section>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <form action="https://formspree.io/f/mbljjavo" method="POST">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+        <section id="gastos" class="d-flex flex-wrap justify-content-around mt-4">
+            <h2 class="w-100 text-center">Productos Disponibles</h2>
+            <!-- Las tarjetas de productos se generan dinámicamente -->
+        </section>
 
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
+        <section id="reseñas" class="d-grid gap-3 mt-5">
+            <h2 class="text-center">Reseñas</h2>
+            <!-- Las reseñas se cargan aqui de forma dinámica -->
+        </section>
 
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
+        <section id="carrito" class="mt-5">
+            <h2 class="text-center">Carrito de Compras</h2>
+            <div class="carrito-container">
+                <!-- Productos del carrito generan de forma dinámica -->
+            </div>
+        </section>
 
-                <button type="submit">Enviar</button>
+        <section id="audio" class="mt-5 text-center">
+            <h2>Relajate con un poco de música</h2>
+            <audio controls>
+                <source src="audio/sax.mp3" type="audio/mpeg" loop>
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </section>
+
+        <section id="contacto" class="mt-5">
+            <h2 class="text-center">Contacto</h2>
+            <form action="https://formspree.io/f/mbljjavo" method="POST" class="mx-auto" style="max-width: 600px;">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" class="form-control" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Enviar</button>
             </form>
         </section>
     </main>
 
-    <footer>
+    <footer class="text-center bg-dark text-white py-3 mt-5">
         <p>&copy; 2024 Gastitos. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
