@@ -49,25 +49,30 @@ El proyecto está diseñado para ser responsivo, utilizando Flexbox y Grid en CS
 
 ## Estructura del Proyecto
 
->Gastitos/
->│-- index.html           # Página principal del proyecto
->│-- css/
->│   └── styles.css       # Estilos personalizados
->│-- js/
->│   └── script.js        # Lógica de JavaScript para dinámicas y validaciones
->│-- audio/
->│   └── sax.mp3  # Archivo de audio integrado
->│-- img/
->│   └── v991-n-26-removebg-preview.png  # Imagen utilizada como fondo
->│   └── favicon.ico  # Favicon
->│-- README.md            # Descripción completa del proyecto
+  ```plaintext
+Gastitos/
+│-- index.html           # Página principal del proyecto
+│-- css/
+│   └── styles.css       # Estilos personalizados
+│-- js/
+│   └── script.js        # Lógica de JavaScript para dinámicas y validaciones
+│-- audio/
+│   └── sax.mp3  # Archivo de audio integrado
+│-- img/
+│   └── v991-n-26-removebg-preview.png  # Imagen utilizada como fondo
+│   └── favicon.ico  # Favicon
+│-- README.md            # Descripción completa del proyecto
+  ```
 
 ---
 
 ## Instalación y Ejecución
 
 1. Clona el repositorio:
->git clone https://github.com/tu-usuario/gastitos.git
+
+  ```bash
+  git clone https://github.com/mbravomonti/tt-web.git
+  ```
 
 2. Abre el archivo index.html en tu navegador preferido.
 
