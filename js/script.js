@@ -215,3 +215,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const formulario = document.querySelector("form");
     formulario.addEventListener("submit", validarFormulario);
 });
+
+// Script para hacer scroll al inicio
+document.getElementById("goTopButton").addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
